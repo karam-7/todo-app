@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    line-height: 1rem;
+    margin: 0;
+    padding: 0;
+    font-family: "Josefin Sans";
+}
+
+body {
+    background-image: url(./images/bg-desktop-light.jpg);
+    background-repeat: no-repeat;
+    background-size: calc(fit-content);
+    min-width: 1340px;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: hsl(236, 33%, 92%);
+}
+
+
+/* ======================== Star Main Area ================ */
+
+#site {
+    width: 500px;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-left: 25rem;
+    min-height: 150vh;
+}
+
+/* Light Theme */
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    color: hsl(0, 0%, 98%);
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+}
+
+.text {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    align-items: center;
+    background-color: hsl(0, 0%, 98%);
+    padding: 1rem;
+    border-radius: 8px;
+    gap: 1rem;
+}
+
+#text-check {
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    border: 1px solid hsl(233, 11%, 84%);
+    outline: none;
+}
+
+.finished #todo{
+    color: hsl(236, 9%, 61%);
+    text-decoration: line-through;
+}
+
+#todowork {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 400;
+    color: hsl(235, 19%, 35%);
+    width: 100%;
+    background-color: hsl(0, 0%, 98%);
+}
+
+.list {
+    margin-top: 2rem;
+    padding: 1rem 0rem;
+    background-color: hsl(0, 0%, 98%);
+    border-radius: 8px 8px 0px 0px;
+}
+
+.work {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    border-bottom: 1px solid hsl(236, 33%, 92%);
+    margin-top: 1rem;
+    gap: 1rem;
+    align-items: center;
+}
+
+#todo {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    color: hsl(235, 19%, 35%);
+    cursor: pointer;
+}
+
+input[type="checkbox"].check {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 24px;
+    height: 20px;
+    border-radius: 100%;
+    border: 1px solid hsl(236, 9%, 61%);
+    outline: none;
+    transition: border-color 0.3s ease;
+    cursor: pointer;
+}
+
+input[type="checkbox"].check:checked {
+    border-color: hsl(220, 98%, 61%);
+    background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%)) center/cover no-repeat;
+}
+
+input[type="checkbox"].check:checked::after {
+    content: url(./images/icon-check.svg);
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 3px;
+}
+
+#cross{
+    cursor: pointer;
+}
+
+.fun {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: -18px;
+}
+
+.left {
+    align-items: center;
+    padding: 1rem;
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(236, 9%, 61%);
+    border-radius: 0px 0px 8px 8px;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.left1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.fun span,
+#clear {
+    cursor: pointer;
+}
+
+.fun span:hover,
+#clear:hover {
+    font-weight: 700;
+    color: hsl(235, 19%, 35%);
+}
+
+.drag-span {
+    margin-top: 8rem;
+    text-align: center;
+    display: inline-block;
+    justify-content: center;
+    width: 100%;
+    color: hsl(236, 9%, 61%);
+}
+
+/* Dark Theme */
+
+.dark {
+    background-color: hsl(235, 21%, 11%);
+    background-image: url(./images/bg-desktop-dark.jpg);
+}
+
+.dark .text, .dark #todowork{
+    background-color: hsl(237, 14%, 26%);
+}
+
+.dark #text-check{
+    background-color: transparent;
+    border-color: hsl(233, 14%, 35%);
+}
+
+.dark #todowork, .dark #todowork::placeholder{
+    color: hsl(234, 39%, 85%);
+}
+
+.dark .list{
+    background-color: hsl(237, 14%, 26%);
+}
+
+.dark .work{
+    border-color: hsl(233, 14%, 35%);
+}
+
+.dark #todo{
+    color: hsl(234, 39%, 85%);
+}
+
+.dark .left{
+    background-color: hsl(237, 14%, 26%);
+    color: hsl(234, 39%, 85%);
+}
+
+.dark #clear:hover, .dark .fun-span:hover{
+    color: hsl(236, 33%, 92%);
+}
+
+.dark #all:hover, .dark #active:hover, .dark #complete:hover{
+    color: hsl(236, 33%, 92%);
+}
+
+
+/* ======================== End Main Area ================ */
+
+/* ======================== START Footer Area ================ */
+
+.foot {
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 20px;
+    color: hsl(35, 77%, 62%);
+    justify-content: center;
+    background-color: hsl(240, 10%, 16%);
+    padding: 5px;
+
+}
+
+.foot a {
+    color: hsl(5, 85%, 63%);
+    text-decoration: none;
+}
+
+.foot a:hover {
+    color: white;
+}
+
+/* ======================== End Footer Area ================ */
+
+/* ======================== Start Media Querry Area ================ */
+
+/* 768px */
+
+@media screen and (max-width: 768px) {
+    .light{
+        min-width: 768px;
+    }
+
+    #site{
+        margin-left: 100px;
+        min-height: 120vh;
+    }
+
+    #cross{
+        display : block;
+    }
+}
+
+/* 375px */
+
+@media screen and (max-width: 375px){
+    .light{
+        min-width: 375px;
+        background-image: url(./images/bg-mobile-light.jpg);
+    }
+
+    .dark{
+        background-image: url(./images/bg-mobile-dark.jpg);
+    }
+
+    #site{
+        margin-left: 0;
+        width: 365px;
+        padding: 1rem;
+    }
+
+    .fun{
+        margin-top: 2rem;
+    }
+}
